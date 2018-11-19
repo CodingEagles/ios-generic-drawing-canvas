@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A40D186921A2DF6700B00FC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40D186721A2DF6700B00FC8 /* Main.storyboard */; };
 		DADBC7E321A2D8830067775E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBC7E221A2D8830067775E /* AppDelegate.swift */; };
 		DADBC7E521A2D8830067775E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBC7E421A2D8830067775E /* ViewController.swift */; };
 		DADBC7EA21A2D8850067775E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DADBC7E921A2D8850067775E /* Assets.xcassets */; };
@@ -16,17 +17,16 @@
 		DADFA31821A2DB3500933AE0 /* DrawCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DADFA31621A2DB3500933AE0 /* DrawCoreData.xcdatamodeld */; };
 		DADFA31A21A2DB6700933AE0 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADFA31921A2DB6700933AE0 /* CoreDataManager.swift */; };
 		DADFA31C21A2DBA200933AE0 /* ViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADFA31B21A2DBA200933AE0 /* ViewControllerDelegate.swift */; };
-		DADFA31D21A2DD0F00933AE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DADBC7F421A2D97D0067775E /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A40D186821A2DF6700B00FC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DADBC7DF21A2D8830067775E /* ios-generic-drawing-canvas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-generic-drawing-canvas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADBC7E221A2D8830067775E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DADBC7E421A2D8830067775E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DADBC7E921A2D8850067775E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DADBC7EC21A2D8850067775E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DADBC7EE21A2D8850067775E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DADBC7F421A2D97D0067775E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "/Users/tavares/Documents/ios-generic-drawing-canvas/ios-generic-drawing-canvas/ios-generic-drawing-canvas/Main.storyboard"; sourceTree = "<absolute>"; };
 		DADFA31221A2DA5B00933AE0 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		DADFA31421A2DA9800933AE0 /* CanvasViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewHelper.swift; sourceTree = "<group>"; };
 		DADFA31721A2DB3500933AE0 /* DrawCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DrawCoreData.xcdatamodel; sourceTree = "<group>"; };
@@ -66,8 +66,8 @@
 			children = (
 				DADBC7E221A2D8830067775E /* AppDelegate.swift */,
 				DADBC7E421A2D8830067775E /* ViewController.swift */,
-				DADBC7F421A2D97D0067775E /* Main.storyboard */,
 				DADBC7E921A2D8850067775E /* Assets.xcassets */,
+				A40D186721A2DF6700B00FC8 /* Main.storyboard */,
 				DADBC7EB21A2D8850067775E /* LaunchScreen.storyboard */,
 				DADBC7EE21A2D8850067775E /* Info.plist */,
 				DADFA31221A2DA5B00933AE0 /* CanvasView.swift */,
@@ -137,7 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DADFA31D21A2DD0F00933AE0 /* Main.storyboard in Resources */,
+				A40D186921A2DF6700B00FC8 /* Main.storyboard in Resources */,
 				DADBC7ED21A2D8850067775E /* LaunchScreen.storyboard in Resources */,
 				DADBC7EA21A2D8850067775E /* Assets.xcassets in Resources */,
 			);
@@ -163,6 +163,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		A40D186721A2DF6700B00FC8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A40D186821A2DF6700B00FC8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		DADBC7EB21A2D8850067775E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -295,13 +303,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 37CT2CQ23H;
+				DEVELOPMENT_TEAM = JP3JNAQ57T;
 				INFOPLIST_FILE = "ios-generic-drawing-canvas/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "codinge-agles.ios-generic-drawing-canvas";
+				PRODUCT_BUNDLE_IDENTIFIER = "codinge-eagles.ios-generic-drawing-canvas";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -313,13 +321,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 37CT2CQ23H;
+				DEVELOPMENT_TEAM = JP3JNAQ57T;
 				INFOPLIST_FILE = "ios-generic-drawing-canvas/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "codinge-agles.ios-generic-drawing-canvas";
+				PRODUCT_BUNDLE_IDENTIFIER = "codinge-eagles.ios-generic-drawing-canvas";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
