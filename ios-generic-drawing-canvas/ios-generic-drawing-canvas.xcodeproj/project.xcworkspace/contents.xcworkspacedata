@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:/Users/tavares/Documents/ios-generic-drawing-canvas/ios-generic-drawing-canvas/ios-generic-drawing-canvas/CanvasView.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/tavares/Documents/ios-generic-drawing-canvas/ios-generic-drawing-canvas/ios-generic-drawing-canvas/Main.storyboard">
+   </FileRef>
+   <FileRef
+      location = "self:ios-generic-drawing-canvas.xcodeproj">
+   </FileRef>
+</Workspace>

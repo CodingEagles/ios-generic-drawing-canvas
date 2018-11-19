@@ -1,0 +1,366 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DADBC7E321A2D8830067775E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBC7E221A2D8830067775E /* AppDelegate.swift */; };
+		DADBC7E521A2D8830067775E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBC7E421A2D8830067775E /* ViewController.swift */; };
+		DADBC7EA21A2D8850067775E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DADBC7E921A2D8850067775E /* Assets.xcassets */; };
+		DADBC7ED21A2D8850067775E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DADBC7EB21A2D8850067775E /* LaunchScreen.storyboard */; };
+		DADFA31321A2DA5B00933AE0 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADFA31221A2DA5B00933AE0 /* CanvasView.swift */; };
+		DADFA31521A2DA9800933AE0 /* CanvasViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADFA31421A2DA9800933AE0 /* CanvasViewHelper.swift */; };
+		DADFA31821A2DB3500933AE0 /* DrawCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DADFA31621A2DB3500933AE0 /* DrawCoreData.xcdatamodeld */; };
+		DADFA31A21A2DB6700933AE0 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADFA31921A2DB6700933AE0 /* CoreDataManager.swift */; };
+		DADFA31C21A2DBA200933AE0 /* ViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADFA31B21A2DBA200933AE0 /* ViewControllerDelegate.swift */; };
+		DADFA31D21A2DD0F00933AE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DADBC7F421A2D97D0067775E /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DADBC7DF21A2D8830067775E /* ios-generic-drawing-canvas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-generic-drawing-canvas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DADBC7E221A2D8830067775E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DADBC7E421A2D8830067775E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DADBC7E921A2D8850067775E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DADBC7EC21A2D8850067775E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DADBC7EE21A2D8850067775E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DADBC7F421A2D97D0067775E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "/Users/tavares/Documents/ios-generic-drawing-canvas/ios-generic-drawing-canvas/ios-generic-drawing-canvas/Main.storyboard"; sourceTree = "<absolute>"; };
+		DADFA31221A2DA5B00933AE0 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		DADFA31421A2DA9800933AE0 /* CanvasViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewHelper.swift; sourceTree = "<group>"; };
+		DADFA31721A2DB3500933AE0 /* DrawCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DrawCoreData.xcdatamodel; sourceTree = "<group>"; };
+		DADFA31921A2DB6700933AE0 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		DADFA31B21A2DBA200933AE0 /* ViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDelegate.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DADBC7DC21A2D8830067775E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DADBC7D621A2D8830067775E = {
+			isa = PBXGroup;
+			children = (
+				DADBC7E121A2D8830067775E /* ios-generic-drawing-canvas */,
+				DADBC7E021A2D8830067775E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DADBC7E021A2D8830067775E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DADBC7DF21A2D8830067775E /* ios-generic-drawing-canvas.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DADBC7E121A2D8830067775E /* ios-generic-drawing-canvas */ = {
+			isa = PBXGroup;
+			children = (
+				DADBC7E221A2D8830067775E /* AppDelegate.swift */,
+				DADBC7E421A2D8830067775E /* ViewController.swift */,
+				DADBC7F421A2D97D0067775E /* Main.storyboard */,
+				DADBC7E921A2D8850067775E /* Assets.xcassets */,
+				DADBC7EB21A2D8850067775E /* LaunchScreen.storyboard */,
+				DADBC7EE21A2D8850067775E /* Info.plist */,
+				DADFA31221A2DA5B00933AE0 /* CanvasView.swift */,
+				DADFA31421A2DA9800933AE0 /* CanvasViewHelper.swift */,
+				DADFA31921A2DB6700933AE0 /* CoreDataManager.swift */,
+				DADFA31B21A2DBA200933AE0 /* ViewControllerDelegate.swift */,
+				DADFA31621A2DB3500933AE0 /* DrawCoreData.xcdatamodeld */,
+			);
+			path = "ios-generic-drawing-canvas";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DADBC7DE21A2D8830067775E /* ios-generic-drawing-canvas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DADBC7F121A2D8850067775E /* Build configuration list for PBXNativeTarget "ios-generic-drawing-canvas" */;
+			buildPhases = (
+				DADBC7DB21A2D8830067775E /* Sources */,
+				DADBC7DC21A2D8830067775E /* Frameworks */,
+				DADBC7DD21A2D8830067775E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ios-generic-drawing-canvas";
+			productName = "ios-generic-drawing-canvas";
+			productReference = DADBC7DF21A2D8830067775E /* ios-generic-drawing-canvas.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DADBC7D721A2D8830067775E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Coding Eagles";
+				TargetAttributes = {
+					DADBC7DE21A2D8830067775E = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = DADBC7DA21A2D8830067775E /* Build configuration list for PBXProject "ios-generic-drawing-canvas" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DADBC7D621A2D8830067775E;
+			productRefGroup = DADBC7E021A2D8830067775E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DADBC7DE21A2D8830067775E /* ios-generic-drawing-canvas */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DADBC7DD21A2D8830067775E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DADFA31D21A2DD0F00933AE0 /* Main.storyboard in Resources */,
+				DADBC7ED21A2D8850067775E /* LaunchScreen.storyboard in Resources */,
+				DADBC7EA21A2D8850067775E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DADBC7DB21A2D8830067775E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DADFA31A21A2DB6700933AE0 /* CoreDataManager.swift in Sources */,
+				DADFA31521A2DA9800933AE0 /* CanvasViewHelper.swift in Sources */,
+				DADBC7E521A2D8830067775E /* ViewController.swift in Sources */,
+				DADFA31821A2DB3500933AE0 /* DrawCoreData.xcdatamodeld in Sources */,
+				DADFA31C21A2DBA200933AE0 /* ViewControllerDelegate.swift in Sources */,
+				DADBC7E321A2D8830067775E /* AppDelegate.swift in Sources */,
+				DADFA31321A2DA5B00933AE0 /* CanvasView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DADBC7EB21A2D8850067775E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DADBC7EC21A2D8850067775E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DADBC7EF21A2D8850067775E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DADBC7F021A2D8850067775E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DADBC7F221A2D8850067775E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37CT2CQ23H;
+				INFOPLIST_FILE = "ios-generic-drawing-canvas/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "codinge-agles.ios-generic-drawing-canvas";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DADBC7F321A2D8850067775E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37CT2CQ23H;
+				INFOPLIST_FILE = "ios-generic-drawing-canvas/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "codinge-agles.ios-generic-drawing-canvas";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DADBC7DA21A2D8830067775E /* Build configuration list for PBXProject "ios-generic-drawing-canvas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DADBC7EF21A2D8850067775E /* Debug */,
+				DADBC7F021A2D8850067775E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DADBC7F121A2D8850067775E /* Build configuration list for PBXNativeTarget "ios-generic-drawing-canvas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DADBC7F221A2D8850067775E /* Debug */,
+				DADBC7F321A2D8850067775E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DADFA31621A2DB3500933AE0 /* DrawCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DADFA31721A2DB3500933AE0 /* DrawCoreData.xcdatamodel */,
+			);
+			currentVersion = DADFA31721A2DB3500933AE0 /* DrawCoreData.xcdatamodel */;
+			path = DrawCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DADBC7D721A2D8830067775E /* Project object */;
+}
