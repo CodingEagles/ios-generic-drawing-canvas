@@ -3,20 +3,28 @@
 //  ios-generic-drawing-canvas
 //
 //  Created by Lucas Tavares on 19/11/18.
-//  Copyright © 2018 Coding Eagles. All rights reserved.
+//  Copyright © 2018 CodingEagles. All rights reserved.
 //
+
 import UIKit
 import CoreGraphics
 
-class CanvasView:UIView {
-    var lineColor: UIColor = .red
-    var lineWidth: CGFloat = 1
+class CanvasView: UIView {
+    
+    // Data Source
+    var lineColor: UIColor = .black
+    var lineWidth: CGFloat = 5
+    
     var path: UIBezierPath!
+    
     var touchPoint: CGPoint!
     var startingPoint: CGPoint!
-    var drawImage: UIImage?
-    var delegate: ViewControllerDelegate?
+    
+    var drawing: UIImage?
+    
     var samplePoints: [CGPoint] = []
+    
+    weak var delegate: CanvasViewDelegate?
     
     override func layoutSubviews() {
         self.clipsToBounds = true
@@ -24,7 +32,6 @@ class CanvasView:UIView {
         path = UIBezierPath()
         path.lineCapStyle = .round
         path.lineJoinStyle = .round
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -43,10 +50,10 @@ class CanvasView:UIView {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0)
         drawHierarchy(in: bounds, afterScreenUpdates: true)
-        drawImage = UIGraphicsGetImageFromCurrentImageContext()
+        drawing = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         samplePoints.removeAll()
-        self.delegate?.drawFinish()
+        self.delegate?.finishedDrawingLine(on: self)
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -61,7 +68,7 @@ class CanvasView:UIView {
         ctx.setAllowsAntialiasing(true)
         ctx.setShouldAntialias(true)
         
-        drawImage?.draw(in: rect)
+        drawing?.draw(in: rect)
         lineColor.setStroke()
         path.removeAllPoints()
         
@@ -80,8 +87,8 @@ class CanvasView:UIView {
     }
     
     func clearCanvas() {
-        self.delegate?.eraseDraw()
-        drawImage = nil
+        self.delegate?.eraseDrawing(on: self)
+        drawing = nil
         setNeedsDisplay()
     }
     
@@ -89,16 +96,4 @@ class CanvasView:UIView {
         return CGPoint(x: (initial.x + last.x)/2, y: (initial.y + last.y)/2)
     }
     
-    //    func controlPointForPoints(p1: CGPoint, p2: CGPoint) -> CGPoint {
-    //        var controlPoint = averageOfPoints(initial: p1, last: p2)
-    //        let diffY = abs(p2.y - controlPoint.y)
-    //
-    //        if (p1.y < p2.y) {
-    //            controlPoint.y += diffY
-    //        } else if (p1.y > p2.y){
-    //            controlPoint.y -= diffY
-    //        }
-    //
-    //        return controlPoint
-    //    }
 }

@@ -9,16 +9,17 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController, ViewControllerDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet weak var canvasView: CanvasView!
+    @IBOutlet weak var imagesView: UIView!
+    
     @IBOutlet weak var lbSizeFont: UILabel!
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var yellowButton: UIButton!
     @IBOutlet weak var blueButton: UIButton!
     @IBOutlet weak var redButton: UIButton!
     
-    @IBOutlet weak var imagesView: UIView!
     
     @IBOutlet weak var penButton: UIButton!
     @IBOutlet weak var moveButton: UIButton!
@@ -29,7 +30,7 @@ class ViewController: UIViewController, ViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.canvasView.delegate = self
+        
         self.canvasView.isMultipleTouchEnabled = true
         let reqImages = NSFetchRequest<Image>(entityName: "Image")
         lbSizeFont.text = "1.0"
@@ -38,7 +39,7 @@ class ViewController: UIViewController, ViewControllerDelegate {
             self.images = CoreDataManager.sharedManager.fetch(reqImages)!
             print(self.images)
             guard let image = self.images.last ?? nil, let picture = image.picture  else { return }
-            self.canvasView.drawImage = UIImage(data: picture)
+            self.canvasView.drawing = UIImage(data: picture)
             self.canvasView.backgroundColor = .clear
         }
         // Do any additional setup after loading the view, typically from a nib.
@@ -75,7 +76,8 @@ class ViewController: UIViewController, ViewControllerDelegate {
         lbSizeFont.text = "\(canvasView.path.lineWidth)"
     }
     func drawFinish() {
-        CanvasViewHelper().save(that: imagesView)
+        canvasView.backgroundColor = .clear
+//        CanvasViewHelper().save(that: imagesView)
     }
     
     func eraseDraw() {
@@ -175,7 +177,7 @@ class ViewController: UIViewController, ViewControllerDelegate {
         
         if recognizer.state == .changed {
             
-            if touchedView != imagesView {
+            if imagesView != imagesView {
                 view.bringSubviewToFront(touchedView!)
                 touchedView!.center = CGPoint(x: location.x, y: location.y)
             }

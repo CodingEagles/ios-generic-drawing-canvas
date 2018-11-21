@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A40D186921A2DF6700B00FC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40D186721A2DF6700B00FC8 /* Main.storyboard */; };
+		A42D10F121A434B800EE5077 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42D10F021A434B800EE5077 /* PageViewController.swift */; };
+		A42D10F421A443D700EE5077 /* StickersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42D10F321A443D700EE5077 /* StickersView.swift */; };
 		DADBC7E321A2D8830067775E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBC7E221A2D8830067775E /* AppDelegate.swift */; };
 		DADBC7E521A2D8830067775E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBC7E421A2D8830067775E /* ViewController.swift */; };
 		DADBC7EA21A2D8850067775E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DADBC7E921A2D8850067775E /* Assets.xcassets */; };
@@ -16,11 +17,12 @@
 		DADFA31521A2DA9800933AE0 /* CanvasViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADFA31421A2DA9800933AE0 /* CanvasViewHelper.swift */; };
 		DADFA31821A2DB3500933AE0 /* DrawCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DADFA31621A2DB3500933AE0 /* DrawCoreData.xcdatamodeld */; };
 		DADFA31A21A2DB6700933AE0 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADFA31921A2DB6700933AE0 /* CoreDataManager.swift */; };
-		DADFA31C21A2DBA200933AE0 /* ViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADFA31B21A2DBA200933AE0 /* ViewControllerDelegate.swift */; };
+		DADFA31C21A2DBA200933AE0 /* CanvasViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADFA31B21A2DBA200933AE0 /* CanvasViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A40D186821A2DF6700B00FC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A42D10F021A434B800EE5077 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		A42D10F321A443D700EE5077 /* StickersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickersView.swift; sourceTree = "<group>"; };
 		DADBC7DF21A2D8830067775E /* ios-generic-drawing-canvas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-generic-drawing-canvas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADBC7E221A2D8830067775E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DADBC7E421A2D8830067775E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,7 +33,7 @@
 		DADFA31421A2DA9800933AE0 /* CanvasViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewHelper.swift; sourceTree = "<group>"; };
 		DADFA31721A2DB3500933AE0 /* DrawCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DrawCoreData.xcdatamodel; sourceTree = "<group>"; };
 		DADFA31921A2DB6700933AE0 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		DADFA31B21A2DBA200933AE0 /* ViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDelegate.swift; sourceTree = "<group>"; };
+		DADFA31B21A2DBA200933AE0 /* CanvasViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A42D10F221A43C6400EE5077 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				A42D10F321A443D700EE5077 /* StickersView.swift */,
+				DADFA31221A2DA5B00933AE0 /* CanvasView.swift */,
+				DADFA31B21A2DBA200933AE0 /* CanvasViewDelegate.swift */,
+				A42D10F021A434B800EE5077 /* PageViewController.swift */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
 		DADBC7D621A2D8830067775E = {
 			isa = PBXGroup;
 			children = (
@@ -64,16 +77,14 @@
 		DADBC7E121A2D8830067775E /* ios-generic-drawing-canvas */ = {
 			isa = PBXGroup;
 			children = (
+				A42D10F221A43C6400EE5077 /* Canvas */,
 				DADBC7E221A2D8830067775E /* AppDelegate.swift */,
-				DADBC7E421A2D8830067775E /* ViewController.swift */,
 				DADBC7E921A2D8850067775E /* Assets.xcassets */,
-				A40D186721A2DF6700B00FC8 /* Main.storyboard */,
 				DADBC7EB21A2D8850067775E /* LaunchScreen.storyboard */,
+				DADBC7E421A2D8830067775E /* ViewController.swift */,
 				DADBC7EE21A2D8850067775E /* Info.plist */,
-				DADFA31221A2DA5B00933AE0 /* CanvasView.swift */,
 				DADFA31421A2DA9800933AE0 /* CanvasViewHelper.swift */,
 				DADFA31921A2DB6700933AE0 /* CoreDataManager.swift */,
-				DADFA31B21A2DBA200933AE0 /* ViewControllerDelegate.swift */,
 				DADFA31621A2DB3500933AE0 /* DrawCoreData.xcdatamodeld */,
 			);
 			path = "ios-generic-drawing-canvas";
@@ -137,7 +148,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A40D186921A2DF6700B00FC8 /* Main.storyboard in Resources */,
 				DADBC7ED21A2D8850067775E /* LaunchScreen.storyboard in Resources */,
 				DADBC7EA21A2D8850067775E /* Assets.xcassets in Resources */,
 			);
@@ -150,11 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A42D10F121A434B800EE5077 /* PageViewController.swift in Sources */,
+				A42D10F421A443D700EE5077 /* StickersView.swift in Sources */,
 				DADFA31A21A2DB6700933AE0 /* CoreDataManager.swift in Sources */,
 				DADFA31521A2DA9800933AE0 /* CanvasViewHelper.swift in Sources */,
 				DADBC7E521A2D8830067775E /* ViewController.swift in Sources */,
 				DADFA31821A2DB3500933AE0 /* DrawCoreData.xcdatamodeld in Sources */,
-				DADFA31C21A2DBA200933AE0 /* ViewControllerDelegate.swift in Sources */,
+				DADFA31C21A2DBA200933AE0 /* CanvasViewDelegate.swift in Sources */,
 				DADBC7E321A2D8830067775E /* AppDelegate.swift in Sources */,
 				DADFA31321A2DA5B00933AE0 /* CanvasView.swift in Sources */,
 			);
@@ -163,14 +175,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A40D186721A2DF6700B00FC8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A40D186821A2DF6700B00FC8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DADBC7EB21A2D8850067775E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
