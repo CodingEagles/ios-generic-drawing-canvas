@@ -26,6 +26,21 @@ class CanvasView: UIView {
     
     weak var delegate: CanvasViewDelegate?
     
+    func loadView() {
+//        self.addInteraction(UIDropInteraction(delegate: self))
+//        self.addInteraction(UIDragInteraction(delegate: self))
+    }
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        loadView()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        loadView()
+    }
+    
     override func layoutSubviews() {
         self.clipsToBounds = true
         self.isMultipleTouchEnabled = false
@@ -70,6 +85,7 @@ class CanvasView: UIView {
         
         drawing?.draw(in: rect)
         lineColor.setStroke()
+        path.lineWidth = lineWidth
         path.removeAllPoints()
         
         if !samplePoints.isEmpty {

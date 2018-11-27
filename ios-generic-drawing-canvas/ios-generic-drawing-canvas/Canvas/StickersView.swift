@@ -13,66 +13,18 @@ class StickersView: UIView {
     var selectedView: UIView?
     
     func loadView() {
+        self.addInteraction(UIDragInteraction(delegate: self))
         
-        let pan = UIPanGestureRecognizer.init(target: self, action: #selector(self.handlePan(_:)))
-        let tap = UITapGestureRecognizer.init(target: self, action: #selector(self.handleTap(_:)))
+        let pinch = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(_:)))
+        let rotation = UIRotationGestureRecognizer(target: self, action: #selector(handleRotation(_:)))
         
-        self.addGestureRecognizer(pan)
-        self.addGestureRecognizer(tap)
+        self.addGestureRecognizer(pinch)
+        self.addGestureRecognizer(rotation)
         
-    }
-    
-    func addView() {
-        let newView = UIView(frame: CGRect(x: 8, y: 16, width: 150, height: 150))
+        let newView = UIView.init(frame: CGRect.init(x: 250, y: 400, width: 250, height: 250))
+        newView.backgroundColor = .black
         
-        let randomHue = CGFloat(arc4random()%256)/256
-        
-        newView.backgroundColor = UIColor(hue: randomHue, saturation: 1, brightness: 1, alpha: 1)
-        
-        self.addSubview(newView)
-    }
-    
-    @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        let recognizer = sender as UITapGestureRecognizer
-        
-        let location = recognizer.location(in: self)
-        
-        let tappedView = self.hitTest(location, with: nil)!
-        
-        if tappedView == self {
-            
-        } else if tappedView == selectedView {
-            selectedView?.layer.borderWidth = 0
-            selectedView?.layer.borderColor = UIColor.clear.cgColor
-            selectedView = nil
-        } else {
-            selectedView?.layer.borderWidth = 0
-            selectedView?.layer.borderColor = UIColor.clear.cgColor
-            
-            tappedView.layer.borderWidth = 10
-            tappedView.layer.borderColor = UIColor.red.cgColor
-            selectedView = tappedView
-        }
-    }
-    
-    @objc func handlePan(_ sender: UIPanGestureRecognizer) {
-        let recognizer = sender
-        
-        let location = recognizer.location(in: self)
-        
-        var touchedView = self as UIView
-        
-        if self.hitTest(location, with: nil)! == selectedView {
-            touchedView = self.hitTest(location, with: nil)!
-        }
-        
-        if recognizer.state == .changed {
-            
-            if touchedView != self {
-                self.bringSubviewToFront(touchedView)
-                touchedView.center = CGPoint(x: location.x, y: location.y)
-            }
-        }
+        addSubview(newView)
     }
     
     override init(frame: CGRect) {
@@ -83,5 +35,89 @@ class StickersView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         loadView()
+    }
+    
+    @objc func handlePinch(_ sender: UIPinchGestureRecognizer? = nil) {
+        let recognizer = sender as! UIPinchGestureRecognizer
+        
+        let location = recognizer.location(in: self)
+        
+        let tappedView = self.hitTest(location, with: nil)!
+        
+        if tappedView == self {
+            
+        } else {
+            if recognizer.state == .began || recognizer.state == .changed {
+                tappedView.transform = (tappedView.transform.scaledBy(x: recognizer.scale, y: recognizer.scale))
+                recognizer.scale = 1.0
+            }
+        }
+    }
+    
+    @objc func handleRotation(_ sender: UIRotationGestureRecognizer? = nil) {
+        let recognizer = sender as! UIRotationGestureRecognizer
+        
+        let location = recognizer.location(in: self)
+        
+        let tappedView = self.hitTest(location, with: nil)!
+        
+        if tappedView == self {
+            
+        } else {
+            if recognizer.state == .began || recognizer.state == .changed {
+                tappedView.transform = tappedView.transform.rotated(by: recognizer.rotation)
+                recognizer.rotation = 0
+            }
+        }
+    }
+    
+}
+
+extension StickersView: UIDragInteractionDelegate {
+    func dragInteraction(_ interaction: UIDragInteraction, itemsForBeginning session: UIDragSession) -> [UIDragItem] {
+        
+        let touchedPoint = session.location(in: self)
+        
+        if let touchedView = self.hitTest(touchedPoint, with: nil) as? UIImageView {
+            let touchedImage = touchedView.image
+            
+            let itemProvider = NSItemProvider(object: touchedImage!)
+            
+            let dragItem = UIDragItem(itemProvider: itemProvider)
+            
+            dragItem.localObject = touchedView
+            
+            return [dragItem]
+        }
+        
+        if let touchedView = self.hitTest(touchedPoint, with: nil) as? UILabel {
+            let touchedText = touchedView.text! as NSString
+
+            let itemProvider = NSItemProvider(object: touchedText)
+
+            let dragItem = UIDragItem(itemProvider: itemProvider)
+
+            dragItem.localObject = touchedView
+
+            return [dragItem]
+        }
+    
+        return []
+    }
+    
+    func dragInteraction(_ interaction: UIDragInteraction, previewForLifting item: UIDragItem, session: UIDragSession) -> UITargetedDragPreview? {
+        return UITargetedDragPreview(view: item.localObject as! UIView)
+    }
+
+    func dragInteraction(_ interaction: UIDragInteraction, willAnimateLiftWith animator: UIDragAnimating, session: UIDragSession) {
+        session.items.forEach { (dragItem) in
+            if let touchedView = dragItem.localObject as? UIView {
+                touchedView.removeFromSuperview()
+            }
+        }
+    }
+    
+    func dragInteraction(_ interaction: UIDragInteraction, item: UIDragItem, willAnimateCancelWith animator: UIDragAnimating) {
+        self.addSubview(item.localObject as! UIView)
     }
 }
